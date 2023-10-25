@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-grad">
+    <div class="w-full border-black h-[100vh] flex items-center justify-center">
+        <div class="w-[50%] mx-auto  text-7xl text-center">
+            <input readonly type="text" placeholder="0" id="result" class="w-full pr-4 bg-transparent outline-none focus:border-none cursor-not-allowed bg-white text-right">
+            <table class="border w-full" cellspacing="20" cellpadding="20">
+                <tr class="">
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="backtick()" id="number">CE</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="reset()" id="number">C</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult('%')" id="number">%</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult('/')" id="number">÷</td>
+                </tr>
+                <tr class="">
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(7)" id="number">7</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(8)" id="number">8</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(9)" id="number">9</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult('*')" id="number">x</td>
+                </tr>
+                <tr class="">
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(4)" id="number">4</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(5)" id="number">5</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(6)" id="number">6</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult('-')" id="number">-</td>
+                </tr>
+                <tr class="">
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(1)" id="number">1</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(2)" id="number">2</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(3)" id="number">3</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult('+')" id="number">+</td>
+                </tr>
+                <tr class="">
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult(0)" id="number">0</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" onclick="appendToResult('.')" id="number">.</td>
+                    <td class="border shadow-inner text-white hover:text-black hover:bg-white p-2" colspan="2" onclick="calculateResult()">=</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
